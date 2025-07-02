@@ -1,15 +1,14 @@
 import streamlit as st
 import pickle
 import string
-import os
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem.porter import PorterStemmer
 
-# Tell NLTK where to look for punkt & stopwords
-nltk.data.path.append(os.path.join(os.getcwd(), "nltk_data"))
-
+# Download required nltk resources
+nltk.download("punkt")
+nltk.download("stopwords")
 
 
 ps = PorterStemmer()
