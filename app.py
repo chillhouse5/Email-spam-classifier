@@ -3,18 +3,12 @@ import pickle
 import string
 import os
 import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem.porter import PorterStemmer
 
-# Let NLTK know where to find downloaded data
-nltk.data.path.append("nltk_data")
-
-# Only add this if you're unsure the data will be there:
-nltk.download("punkt", download_dir="nltk_data")
-nltk.download("stopwords", download_dir="nltk_data")
+# Tell NLTK where to look for punkt & stopwords
+nltk.data.path.append(os.path.join(os.getcwd(), "nltk_data"))
 
 
 
